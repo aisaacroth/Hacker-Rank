@@ -2,3 +2,5 @@ prjt-init
 clnzr.py
 line_wrapper.py
 clean-wrap.sh
+
+*/__pycache__/
