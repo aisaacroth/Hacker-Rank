@@ -8,7 +8,6 @@ import sys
 
 def main(args):
     num_tests, tests = get_testcases(sys.argv[1])
-    print(num_tests)
     for test in tests:
         result = generate_decent_number(test)
         print(''.join(str(i) for i in result) if isinstance(result, list) 
