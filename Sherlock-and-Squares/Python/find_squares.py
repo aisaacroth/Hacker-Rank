@@ -22,9 +22,9 @@ def get_testcases(filename):
 
 
 def find_square_roots(start, end):
-    start_root = int(math.sqrt(start))
-    end_root = int(math.sqrt(end))
-    return end_root - start_root
+    start_root = math.ceil(math.sqrt(start))
+    end_root = math.floor(math.sqrt(end))
+    return end_root - start_root + 1
 
 
 def print_arguments(arg):
