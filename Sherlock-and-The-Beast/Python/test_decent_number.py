@@ -59,6 +59,5 @@ class TestDecentNumber(unittest.TestCase):
         self.assertEqual(55555533333, test_ans)
 
 
-
 if __name__ == '__main__':
     unittest.main()
