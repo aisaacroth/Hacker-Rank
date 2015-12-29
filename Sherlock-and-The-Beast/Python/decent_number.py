@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 '''
+Decent Number program
 
 Author: Alexander Roth
 Date:   2015-11-26
@@ -9,9 +10,7 @@ import sys
 def main(args):
     num_tests, tests = get_testcases(sys.argv[1])
     for test in tests:
-        result = generate_decent_number(test)
-        print(''.join(str(i) for i in result) if isinstance(result, list) 
-              else result) 
+         print(generate_decent_number(test))
 
 
 def get_testcases(filename):
@@ -35,7 +34,7 @@ def generate_decent_number(testcase):
     for i in range(pivot, testcase):
         decent_list.append(3)
 
-    return decent_list
+    return int(''.join(str(i) for i in decent_list))
 
 
 def get_pivot(number):
