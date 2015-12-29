@@ -39,6 +39,7 @@ def get_digits(number):
 
 def print_arguments(arg):
     print("python3 {0} <file>".format(arg))
+    sys.exit(1)
 
 
 if __name__ == '__main__':
