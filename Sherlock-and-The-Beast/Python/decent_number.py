@@ -21,8 +21,16 @@ def get_testcases(filename):
 
 
 def generate_decent_number(testcase):
+    '''Generates the decent number using the following greedy algorithm:
+
+        First, we determine the longest possible substring that is divisible by
+        3. We use this index as our end point for the longest possible substring
+        of 5's. Once we have reached this endpoint, we know that the remaining
+        substring in the string of digits is divisible by 5; thus, we can fill
+        the remaining substring with 3's.'''
     pivot = get_pivot(testcase)
 
+    # If pivot is nonnegative, the string properties are not met.
     if pivot < 0:
         return -1
 
@@ -34,10 +42,13 @@ def generate_decent_number(testcase):
     for i in range(pivot, testcase):
         decent_list.append(3)
 
+    # Return as integer value
     return int(''.join(str(i) for i in decent_list))
 
 
 def get_pivot(number):
+    '''Determines the index of the longest possible substring that is divisible 
+    by 3'''
     pivot = number
 
     while pivot > 0:
