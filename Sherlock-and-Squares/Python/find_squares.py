@@ -22,6 +22,8 @@ def get_testcases(filename):
 
 
 def find_square_roots(start, end):
+    '''Locates the number of squares between a given range by counting the
+    distance between the square roots of the start and end integer values.'''
     start_root = math.ceil(math.sqrt(start))
     end_root = math.floor(math.sqrt(end))
     return end_root - start_root + 1
