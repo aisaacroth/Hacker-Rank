@@ -23,10 +23,13 @@ def get_testcases(filename):
 
 
 def find_divisible_digits(number):
+    '''Finds the total count of digits in a number that divide said number
+    evenly.'''
     digit_list = get_digits(number)
 
     divisible_count = 0
     for digit in digit_list:
+        # As long as the digit is not zero and divides evenly
         if digit and number % digit == 0:
             divisible_count += 1
 
@@ -34,6 +37,7 @@ def find_divisible_digits(number):
 
 
 def get_digits(number):
+    '''Returns a list of digits for a given number.'''
     return [int(i) for i in str(number)]
 
 
